@@ -1,4 +1,4 @@
-import 'package:bbnavigationbar/tenan/qrview.dart';
+import 'package:bbnavigationbar/ref/tenan/qrview.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:flutter/services.dart';

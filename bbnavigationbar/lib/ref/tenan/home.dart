@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'secondscreen.dart';
-import 'package:bbnavigationbar/listviecontrol.dart';
+import 'package:bbnavigationbar/ref/listviecontrol.dart';
 import 'listviewmenu.dart';
 
 class Home extends StatefulWidget {

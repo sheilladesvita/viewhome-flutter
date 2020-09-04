@@ -1,4 +1,4 @@
-import 'package:bbnavigationbar/tenan/checkoutview.dart';
+import 'package:bbnavigationbar/ref/tenan/checkoutview.dart';
 import 'listviemodel.dart';
 import 'tenan/productview.dart';
 import 'package:flutter/material.dart';

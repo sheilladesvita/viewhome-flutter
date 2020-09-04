@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:bbnavigationbar/listviemodel.dart';
+import 'package:bbnavigationbar/ref/listviemodel.dart';
 
 
 class ProductView extends StatelessWidget {
