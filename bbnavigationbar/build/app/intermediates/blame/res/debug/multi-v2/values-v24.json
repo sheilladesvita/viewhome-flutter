@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\project_TA\\viewhome-flutter\\bbnavigationbar\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "F:\\TA\\Dokumen flutter\\bbnavigationbar\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LISNA SRISUNDA\\.gradle\\caches\\transforms-2\\files-2.1\\953a6b13873b1d296d05f36dc0e3ac11\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Sheilla\\.gradle\\caches\\transforms-2\\files-2.1\\58a13a12df357bac8d1bfe94476f50fa\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LISNA SRISUNDA\\.gradle\\caches\\transforms-2\\files-2.1\\00e0c45bdf1dd8679fd008a42ad5d060\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Sheilla\\.gradle\\caches\\transforms-2\\files-2.1\\f6b0bd4646e328e1c41c2b90cbd6dc14\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
