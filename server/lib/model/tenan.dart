@@ -1,18 +1,29 @@
 import 'package:server/server.dart';
+import 'package:server/model/pengguna.dart';
 import 'package:server/model/menu.dart';
-import 'package:server/model/transaksi.dart';
 
-class Tenan extends ManagedObject<_Tenan> implements _Tenan{}
+class Tenan extends ManagedObject<_Tenan> implements _Tenan {}
 
-@Table(name:"TENAN")
+@Table(name: "TENAN")
 class _Tenan {
-  @Column(primaryKey: true)
-  String username;
+  @Column(primaryKey: true, unique: true)
+  String id;
 
-  String nama;
+  String nama_tenan;
+  
+  String nama_pemilik;
+  
+  @Column(nullable: true)
+  String nomor_telepon;
+  
+  @Column(nullable: true)
+  String email;
+
+  @Column(nullable: true)
   String alamat;
-  String no_telp;
+
+  @Relate(#tenan)
+  Pengguna pengguna;
 
   ManagedSet<Menu> menu;
-  ManagedSet<Transaksi> transaksi;
 }

@@ -25,31 +25,11 @@ class MenuController extends ResourceController {
     return Response.ok(menu);
   }
 
-  @Operation.post()
-  Future<Response> createMenu(@Bind.body() Menu inputMenu) async {
-    final query = Query<Menu>(context)..values = inputMenu;
-    final insertedMenu = await query.insert();
-    return Response.ok(insertedMenu);
-  }
-
-  @Operation.delete('id')
-  Future<Response> deleteMenuById(@Bind.path('id') String id) async {
-    final menuQuery = Query<Menu>(context)..where((h) => h.id).equalTo(id);
-    final menu = await menuQuery.delete();
+  @Operation.get('tenan')
+  Future<Response> getMenuByIdTenan(@Bind.path('tenan') String tenan) async {
+    final menuQuery = Query<Menu>(context)..where((h) => h.tenan.id).equalTo(tenan);
+    final menu = await menuQuery.fetch();
     if(menu == null) {
-      return Response.notFound();
-    }
-
-    return Response.ok(menu);
-  }
-
-  @Operation.put('id')
-  Future<Response> updateMenuById(@Bind.path('id') String id, @Bind.body() Menu inputMenu) async {
-    final menuQuery = Query<Menu>(context)
-      ..where((h) => h.id).equalTo(id)
-      ..values = inputMenu;
-    final menu = await menuQuery.updateOne();
-    if (menu == null) {
       return Response.notFound();
     }
     return Response.ok(menu);

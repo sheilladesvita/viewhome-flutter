@@ -1,5 +1,9 @@
 import 'package:server/controller/pengguna_controller.dart';
 import 'package:server/controller/tenan_controller.dart';
+import 'package:server/controller/menu_controller.dart';
+import 'package:server/controller/kasir_controller.dart';
+import 'package:server/controller/pemesanan_controller.dart';
+import 'package:server/controller/detail_pemesanan_controller.dart';
 import 'server.dart';
 
 /// This type initializes an application.
@@ -19,8 +23,8 @@ class ServerChannel extends ApplicationChannel {
     logger.onRecord.listen((rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
 
     final dataModel = ManagedDataModel.fromCurrentMirrorSystem();
-    final persistentStore = PostgreSQLPersistentStore.fromConnectionInfo("postgres", "password", "localhost", 5432, "pujasera");
-    
+    final persistentStore = PostgreSQLPersistentStore.fromConnectionInfo("postgres", "password", "localhost", 5435, "pujasera");
+
     context = ManagedContext(dataModel, persistentStore);
   }
 
@@ -37,18 +41,38 @@ class ServerChannel extends ApplicationChannel {
     // Prefer to use `link` instead of `linkFunction`.
     // See: https://aqueduct.io/docs/http/request_controller/
     router
-      .route('/pengguna/[:username]')
-      .link(() => PenggunaController(context));
-    
-    router
-      .route('/tenan/[:username]')
-      .link(() => TenanController(context));
-
-    router
       .route("/example")
       .linkFunction((request) async {
         return Response.ok({"key": "value"});
       });
+    
+    router
+      .route('/pengguna/[:username]')
+      .link(() => PenggunaController(context));
+
+    router
+      .route('/tenan/[:id]')
+      .link(() => TenanController(context));
+
+    router
+      .route('/menu/[:id]')
+      .link(() => MenuController(context));
+    
+    router
+      .route('/menu/tenan/[:tenan]')
+      .link(() => MenuController(context));
+
+    router
+      .route('/kasir/[:id]')
+      .link(() => KasirController(context));
+
+    router
+      .route('/pemesanan/[:id]')
+      .link(() => PemesananController(context));
+
+    router
+      .route('/detail_pemesanan/[:id]')
+      .link(() => DetailPemesananController(context));
 
     return router;
   }

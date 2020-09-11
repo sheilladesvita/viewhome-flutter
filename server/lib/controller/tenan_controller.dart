@@ -15,41 +15,11 @@ class TenanController extends ResourceController {
     return Response.ok(tenan);
   }
 
-  @Operation.get('username')
-  Future<Response> getTenanById(@Bind.path('username') String username) async {
-    final tenanQuery = Query<Tenan>(context)..where((h) => h.username).equalTo(username);
-    final tenan = await tenanQuery.fetchOne();
+  @Operation.get('id')
+  Future<Response> getTenanById(@Bind.path('id') String id) async {
+    final tenanQuery = Query<Tenan>(context)..where((h) => h.id).equalTo(id);
+    final tenan = await tenanQuery.fetch();
     if(tenan == null) {
-      return Response.notFound();
-    }
-    return Response.ok(tenan);
-  }
-
-  @Operation.post()
-  Future<Response> createTenan(@Bind.body() Tenan inputTenan) async {
-    final query = Query<Tenan>(context)..values = inputTenan;
-    final insertedTenan = await query.insert();
-    return Response.ok(insertedTenan);
-  }
-
-  @Operation.delete('username')
-  Future<Response> deleteTenanById(@Bind.path('username') String username) async {
-    final tenanQuery = Query<Tenan>(context)..where((h) => h.username).equalTo(username);
-    final tenan = await tenanQuery.delete();
-    if(tenan == null) {
-      return Response.notFound();
-    }
-
-    return Response.ok(tenan);
-  }
-
-  @Operation.put('username')
-  Future<Response> updateTenanById(@Bind.path('username') String username, @Bind.body() Tenan inputTenan) async {
-    final tenanQuery = Query<Tenan>(context)
-      ..where((h) => h.username).equalTo(username)
-      ..values = inputTenan;
-    final tenan = await tenanQuery.updateOne();
-    if (tenan == null) {
       return Response.notFound();
     }
     return Response.ok(tenan);

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\TA\\Dokumen flutter\\bbnavigationbar\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-am\\values-am.xml",
+            "outputFile": "G:\\project_TA\\viewhome-flutter\\bbnavigationbar\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-am\\values-am.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Sheilla\\.gradle\\caches\\transforms-2\\files-2.1\\1954ea9059d2d3054a02a58bc043b8be\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\LISNA SRISUNDA\\.gradle\\caches\\transforms-2\\files-2.1\\af012440389c45e23fd642f4573235eb\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Sheilla\\.gradle\\caches\\transforms-2\\files-2.1\\58a13a12df357bac8d1bfe94476f50fa\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\LISNA SRISUNDA\\.gradle\\caches\\transforms-2\\files-2.1\\953a6b13873b1d296d05f36dc0e3ac11\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
