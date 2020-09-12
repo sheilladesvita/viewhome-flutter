@@ -1,4 +1,0 @@
-#Tue Sep 08 16:07:36 ICT 2020
-base.0=G\:\\project_TA\\viewhome-flutter\\bbnavigationbar\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex
